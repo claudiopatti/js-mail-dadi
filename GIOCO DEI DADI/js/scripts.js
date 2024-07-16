@@ -22,5 +22,5 @@ if (numberPerson > numberComputer ) {
 }
 else {
     document.getElementById('resultMatch').innerHTML = 'E\' pari'
-    console.log('è pari');
+    console.log('Pari');
 }
