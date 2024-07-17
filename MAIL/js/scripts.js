@@ -43,22 +43,33 @@ infoForm.addEventListener('submit' ,
         const emailInput = document.getElementById('emailInput');
         console.log('emailInput.value', emailInput.value);
         
+        let found = false
         
         for (let i = 0; i < enterEmail.length; i++ ){
             // console.log('enterEmail[i]' , enterEmail[i] , typeof enterEmail[i])
         
             if (emailInput.value == enterEmail[i]) {
                 console.log(enterEmail[i])
-                document.getElementById('resultEmail').innerHTML = 'E\' corretta' ;
-                return i ;
+                // document.getElementById('resultEmail').innerHTML = 'E\' corretta' ;
+                // return i ;
+                found = true
 
                 // alert('Sei uno dei nostri' + " " + emailInput.value)
             }
-            else {
-                console.log('email non presente' )
-                document.getElementById('resultEmail').innerHTML = 'E\' sbagliata' ;
-                // alert('Non ti è permesso entrare')
-            }
+            // else {
+            //     console.log('email non presente' )
+            //     document.getElementById('resultEmail').innerHTML = 'E\' sbagliata' ;
+            //     // alert('Non ti è permesso entrare')
+            // }
+        }
+
+        if (found) {
+            document.getElementById('resultEmail').innerHTML = 'E\' corretta' ;
+            
+        }
+        else {
+            document.getElementById('resultEmail').innerHTML = 'E\' sbagliata' ;
+
         }
     }
 
